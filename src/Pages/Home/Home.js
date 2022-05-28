@@ -5,6 +5,7 @@ import NewInfo from './NewInfo';
 import Service from './Service';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Summary from './Summary';
 
 const Home = () => {
     const [services] = useServices()
@@ -24,9 +25,10 @@ const Home = () => {
                     }
                 </div>
                 <div className='my-5 flex justify-center'>
-                    <Link to='services' className='font-semibold text-accent-focus flex'>See more<FaLongArrowAltRight className='text-2xl'></FaLongArrowAltRight></Link>
+                    <Link to='services' className='font-semibold text-accent-focus'>See More</Link> <span className='text-2xl ml-1 text-accent-focus'><FaLongArrowAltRight></FaLongArrowAltRight></span>
                 </div>
             </div>
+            <Summary></Summary>
         </div>
     );
 };

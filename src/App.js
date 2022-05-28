@@ -4,7 +4,6 @@ import Home from "./Pages/Home/Home";
 import Services from "./Pages/Home/Services";
 import Login from "./Pages/Login/Login";
 import Parts from "./Pages/Parts/Parts";
-import Products from "./Pages/Parts/Parts";
 import Footer from "./Pages/Shared/Footer";
 import Navbar from "./Pages/Shared/Navbar";
 
