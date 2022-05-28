@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Power Supply",
+        "img": "https://i.ibb.co/Zz9GNnR/giant-126466.jpg",
+        "details": "The DQ850-M-V2L features a fully modular 850W 80 Plus gold power supply with 100% Japanese capacitors and a high-quality switch, temperature control feature on the 120mm silent fan helps to keep noise levels down, a high-grade Japanese 105℃ PFC boost capacitor, excellent 1 and 2-stage EMI filter circuit, highly reliable supervisor IC for protection,",
+        "min-quantity": "100",
+        "available": "1600",
+        "price": "108"
+    },
+    {
+        "name": "Motherboard",
+        "img": "https://i.ibb.co/Z1r37XJ/giant-153560.jpg",
+        "details": "Intel Socket 1200 for 12th Gen Intel Core. Motherboards are designed to withstand continuous use to withstand moisture, corrosion and over voltage to ensure long life. The motherboard includes a full compatibility test with 144 hours of discussion system testing and over 100 gaming peripherals. This expedition motherboards offer incredible uninterrupted gaming performance as well as the highest level of stability, reliability.",
+        "min-quantity": "60",
+        "available": "1400",
+        "price": "310"
+    },
+    {
+        "name": "Chipset",
+        "img": "https://i.ibb.co/pWvLfNm/giant-121674.png",
+        "details": "Intel Skylake core i9/i7/i5/i3 computer processor has up to 5.0 GHz clock speed, sockets supported LGA1151, lithography 14nm, Intel HD Graphics, four-channel DDR4/DDR5 memory support. Intel Processor a mainstream yet very gaming-friendly processor.it offers slightly better performance than the previous CPU flagship.",
+        "quantity": "70",
+        "available": "1400",
+        "price": "390"
+    },
+    {
+        "name": "Graphics Card",
+        "img": "https://i.ibb.co/3RtzmTN/giant-116752.jpg",
+        "details": "Gaming GeForce RTX twin edge OC GDDR6 graphics card get amplified with 30/20/10 series based on the NVIDIA architecture, built with enhanced RT cores and tensor cores, GDDR6 high-speed memory, NVIDIA has debuted its second silicon-based on the GeForce architecture. This chip has lighter specs but close to double the SIMD muscle as its predecessor, 4K ultra HD gaming with high settings. It should cater to high refresh rate e-sports gaming at 1440p and full HD 1080p, all-new 11 blade fan increases airflow by up to 10%, powerful aluminum fen-stack array heatsink paired with up to five copper heat pipes, 231.9 x 141.3 x 41.5mm card length.",
+        "quantity": "50",
+        "available": "1450",
+        "price": "430"
+    },
+    {
+        "name": "Hard Drive",
+        "img": "https://i.ibb.co/NLqvYyn/skyhawk-4tb-5900rpm-1.jpg",
+        "details": "64MB Cache 5900RPM Internal Surveillance HDD interface with SATA 6GB/s and 64 Cache (MB). Image Perfect firmware supports 24×7 surveillance-optimized workloads tuned to record about 90% of the time and play back video footage the remaining 10%. Lower power consumption means a reduction in heat emissions, which improves reliability in surveillance solutions. Tarnish-resistant components help protect drive from environmental elements, increasing field reliability. Best-Fit Applications are Network Video Recorders (NVR), Embedded Surveillance DVRs (SDVR), Hybrid Surveillance DVRs, and Surveillance DVRs",
+        "quantity": "80",
+        "available": "1800",
+        "price": "102"
+    },
+    {
+        "name": "RAM",
+        "img": "https://i.ibb.co/bNf46jY/G-Skill-NT-Series-8-GB-DDR3-1600-BUS-RAM-500x500-1.jpg",
+        "details": "The included RAM water block is designed with a premium grade CNC machined copper base, PMMA cover and anti-corrosive nickel plating to allow for high water flow performance capable of maximizing cooling for up to four DDR4 memory modules.",
+        "quantity": "100",
+        "available": "3400",
+        "price": "83"
+    }
+]
