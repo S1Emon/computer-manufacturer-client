@@ -1,20 +1,37 @@
 import React from 'react';
 import auth from '../../Firebase/Firebase.init';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
+import Loading from '../Shared/Loading';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
-    const onSubmit = data => {
+    let signInError;
 
+    const onSubmit = data => {
         console.log(data)
+        signInWithEmailAndPassword(data.email, data.password);
     };
 
-    if (user) {
-        console.log(user);
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
+
+    if (user || gUser) {
+        console.log(user, gUser);
+    }
+    if (error || gError) {
+        signInError = <p className='text-red-500'>{error?.message || gError?.message}</p>
     }
 
     return (
@@ -76,8 +93,10 @@ const Login = () => {
                         </div>
 
 
-                        <input type="submit" class="btn btn-outline btn-accent w-full mx-w-xs" value="Login" />
+                        {signInError}
+                        <input type="submit" class="btn btn-accent w-full mx-w-xs" value="Login" />
                     </form>
+                    <p><small>New to Parts Manufacturer? <Link to="/register" className="text-accent">Create an account</Link></small></p>
 
                     <div class="divider">OR</div>
                     <button

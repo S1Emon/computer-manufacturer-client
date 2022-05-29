@@ -3,6 +3,7 @@ import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import Services from "./Pages/Home/Services";
 import Login from "./Pages/Login/Login";
+import Register from "./Pages/Login/Register";
 import BuyNow from "./Pages/Parts/BuyNow";
 import Parts from "./Pages/Parts/Parts";
 import Footer from "./Pages/Shared/Footer";
@@ -18,6 +19,7 @@ function App() {
         <Route path="parts/:partsId" element={<BuyNow />}></Route>
         <Route path="services" element={<Services></Services>}></Route>
         <Route path="login" element={<Login></Login>}></Route>
+        <Route path="register" element={<Register></Register>}></Route>
         <Route path="about" element={<About></About>}></Route>
       </Routes>
       <Footer></Footer>
