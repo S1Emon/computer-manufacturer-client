@@ -1,7 +1,11 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase/Firebase.init';
 
 const BuyingModal = ({ buyPart, setBuyPart }) => {
     const { name, quantity, available } = buyPart;
+    const [user] = useAuthState(auth);
+    console.log(user);
 
     const handleBuying = event => {
         event.preventDefault();
@@ -29,9 +33,9 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
 
                         <input type="number" placeholder='Enter Quantity (Not less then minimum)' name="order" min={quantity} max={available} class="input input-bordered input-accent w-full max-w-xs" />
 
-                        <input type="text" placeholder="Your Name" name="name" class="input input-bordered input-accent w-full max-w-xs" />
+                        <input type="text" disabled value={user?.displayName || ''} name="name" class="input input-bordered input-accent w-full max-w-xs" />
 
-                        <input type="email" placeholder="Your Email address" name="email" class="input input-bordered input-accent w-full max-w-xs" />
+                        <input type="email" disabled value={user?.email || ''} name="email" class="input input-bordered input-accent w-full max-w-xs" />
 
                         <input type="number" placeholder="Your Phone Number" name="phone" class="input input-bordered input-accent w-full max-w-xs" />
 

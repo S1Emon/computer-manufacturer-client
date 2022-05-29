@@ -8,6 +8,7 @@ import BuyNow from "./Pages/Parts/BuyNow";
 import Parts from "./Pages/Parts/Parts";
 import Footer from "./Pages/Shared/Footer";
 import Navbar from "./Pages/Shared/Navbar";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="parts" element={<Parts></Parts>}></Route>
-        <Route path="parts/:partsId" element={<BuyNow />}></Route>
+        <Route path="parts/:partsId" element={
+          <PrivateRoute>
+            <BuyNow />
+          </PrivateRoute>}>
+        </Route>
         <Route path="services" element={<Services></Services>}></Route>
         <Route path="login" element={<Login></Login>}></Route>
         <Route path="register" element={<Register></Register>}></Route>
