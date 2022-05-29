@@ -12,16 +12,16 @@ const Part = ({ part }) => {
     return (
         <div class="card lg:max-w-lg bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-                <img className='w-96 h-64' src={img} alt="Shoes" class="rounded-xl" />
+                <img className='w-64 h-48' src={img} alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{name}</h2>
                 <p>Price: ${price}</p>
-                <p>Description: {details}</p>
+                <p>Description: <small>{details}</small></p>
                 <p>Minimum Order: {quantity}</p>
                 <p>Available Quantity: {available}</p>
                 <div>
-                    <button className="btn btn-outline-primary w-100" onClick={() => handleNavigate(_id)}>Update Now</button>
+                    <button className="btn bg-accent-focus text-white" onClick={() => handleNavigate(_id)}>Buy Now</button>
                 </div>
             </div>
         </div>

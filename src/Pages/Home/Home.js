@@ -6,6 +6,7 @@ import Service from './Service';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Summary from './Summary';
+import Parts from '../Parts/Parts'
 
 const Home = () => {
     const [services] = useServices()
@@ -14,6 +15,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <NewInfo></NewInfo>
+            <Parts></Parts>
             <div className='container mx-auto'>
                 <div className='text-center mb-8'>
                     <h3 className='text-accent-focus font-bold text-xl uppercase'>Our Services</h3>
