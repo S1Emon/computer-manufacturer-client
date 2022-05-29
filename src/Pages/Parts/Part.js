@@ -10,12 +10,12 @@ const Part = ({ part }) => {
         navigate(`/parts/${id}`);
     }
     return (
-        <div class="card lg:max-w-lg bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-                <img className='w-64 h-48' src={img} alt="Shoes" class="rounded-xl" />
+        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+            <figure className="px-10 pt-10">
+                <img className='w-64 rounded-xl h-48' src={img} alt="Shoes" />
             </figure>
-            <div class="card-body items-center text-center">
-                <h2 class="card-title">{name}</h2>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title">{name}</h2>
                 <p>Price: ${price}</p>
                 <p>Description: <small>{details}</small></p>
                 <p>Minimum Order: {quantity}</p>

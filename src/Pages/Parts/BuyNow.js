@@ -16,12 +16,12 @@ const BuyNow = () => {
     return (
         <div className='container'>
             <h1>Buy Now : {partsId}</h1>
-            <div class="card lg:max-w-lg bg-base-100 shadow-xl">
-                <figure class="px-10 pt-10">
-                    <img className='w-64 h-48' src={part?.img} alt="Shoes" class="rounded-xl" />
+            <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                    <img className='w-64 h-48 rounded-xl' src={part?.img} alt="Parts" />
                 </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">{part?.name}</h2>
+                <div className="card-body items-center text-center">
+                    <h2 className="card-title">{part?.name}</h2>
                     <p>Price: ${part?.price}</p>
                     <p>Description: <small>{part?.details}</small></p>
                     <p>Minimum Order: {part?.quantity}</p>

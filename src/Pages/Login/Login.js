@@ -38,20 +38,20 @@ const Login = () => {
 
     return (
         <div className='flex justify-center items-center h-screen'>
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="text-center font-bold text-2xl">Login</h2>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="text-center font-bold text-2xl">Login</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         {/* Email Field */}
-                        <div class="form-control w-full max-w-xs">
-                            <label class="label">
-                                <span class="label-text">Your Email</span>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Your Email</span>
                             </label>
                             <input type="email"
                                 placeholder="Email address"
-                                class="input input-bordered w-full max-w-xs"
+                                className="input input-bordered w-full max-w-xs"
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -63,20 +63,20 @@ const Login = () => {
                                     }
                                 })}
                             />
-                            <label class="label">
-                                {errors.email?.type === 'required' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
-                                {errors.email?.type === 'pattern' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
+                            <label className="label">
+                                {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+                                {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                             </label>
                         </div>
 
                         {/* Password Field*/}
-                        <div class="form-control w-full max-w-xs">
-                            <label class="label">
-                                <span class="label-text">Password</span>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Password</span>
                             </label>
                             <input type="password"
                                 placeholder="Password"
-                                class="input input-bordered w-full max-w-xs"
+                                className="input input-bordered w-full max-w-xs"
                                 {...register("password", {
                                     required: {
                                         value: true,
@@ -88,22 +88,22 @@ const Login = () => {
                                     }
                                 })}
                             />
-                            <label class="label">
-                                {errors.password?.type === 'required' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
-                                {errors.password?.type === 'minLength' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
+                            <label className="label">
+                                {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                                {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                             </label>
                         </div>
 
 
                         {signInError}
-                        <input type="submit" class="btn btn-accent w-full mx-w-xs" value="Login" />
+                        <input type="submit" className="btn btn-accent w-full mx-w-xs" value="Login" />
                     </form>
                     <p><small>New to Parts Manufacturer? <Link to="/register" className="text-accent">Create an account</Link></small></p>
 
-                    <div class="divider">OR</div>
+                    <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        class="btn btn-outline btn-accent"
+                        className="btn btn-outline btn-accent"
                     >Continue with Google</button>
                 </div>
             </div>
