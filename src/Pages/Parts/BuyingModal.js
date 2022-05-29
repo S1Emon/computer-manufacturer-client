@@ -12,9 +12,9 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
         const order = event.target.order.value;
         const phone = event.target.phone.value;
         const buying = {
-            buyPartId: _id,
-            buyPart: name,
-            customerName: user.displayName,
+            // id: _id,
+            parts: name,
+            customer: user.displayName,
             email: user?.email,
             phone: phone,
             quantity: order,
@@ -31,10 +31,10 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
             .then(res => res.json())
             .then(data => {
                 if (!data.success) {
-                    toast.success(`Your order is placed ${name}`)
+                    toast.success(`Your order is placed`)
                 }
                 else {
-                    toast.error(`Error to Placed ${name}`)
+                    toast.error(`Error to Placed`)
                 }
                 setBuyPart(null);
             });
@@ -56,9 +56,9 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
 
                         <input type="number" placeholder='Enter Quantity (Not less then minimum)' name="order" min={quantity} max={available} className="input input-bordered input-accent w-full max-w-xs" />
 
-                        <input type="text" disabled value={user?.displayName || ''} name="name" className="input input-bordered input-accent w-full max-w-xs" />
+                        <input type="text" disabled value={user?.displayName} name="name" className="input input-bordered input-accent w-full max-w-xs" />
 
-                        <input type="email" disabled value={user?.email || ''} name="email" className="input input-bordered input-accent w-full max-w-xs" />
+                        <input type="email" disabled value={user?.email} name="email" className="input input-bordered input-accent w-full max-w-xs" />
 
                         <input type="number" placeholder="Your Phone Number" name="phone" className="input input-bordered input-accent w-full max-w-xs" />
 

@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -16,25 +17,28 @@ const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [updateProfile, updating, updatingError] = useUpdateProfile(auth);
 
+    const [token] = useToken(user || gUser)
+
     const navigate = useNavigate();
 
     let signInError;
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name })
-        navigate("/");
     };
 
     if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
 
-    if (user || gUser) {
-        console.log(user, gUser);
+    if (token) {
+        navigate("/");
     }
+
     if (error || gError || updatingError) {
         signInError = <p className='text-red-500'>{error?.message || gError?.message || updatingError?.message}</p>
     }
+
     return (
         <div className='container mx-auto'>
             <div className='flex justify-center items-center h-screen my-10'>
@@ -47,7 +51,7 @@ const Register = () => {
                             {/* Name Field */}
                             <div class="form-control w-full max-w-xs">
                                 <label class="label">
-                                    <span class="label-text">Your Email</span>
+                                    <span class="label-text">Your Name</span>
                                 </label>
                                 <input type="text"
                                     placeholder="Your Full Name"
@@ -117,7 +121,7 @@ const Register = () => {
                             {signInError}
                             <input type="submit" class="btn btn-accent w-full mx-w-xs" value="Login" />
                         </form>
-                        <p><small>New to Parts Manufacturer? <Link to="/register" className="text-accent">Create an account</Link></small></p>
+                        <p><small>Already have an account? <Link to="/login" className="text-accent">Please login</Link></small></p>
 
                         <div class="divider">OR</div>
                         <button

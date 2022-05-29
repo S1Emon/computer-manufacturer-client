@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import auth from '../../Firebase/Firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../hooks/useToken';
 
 
 const Login = () => {
@@ -21,17 +22,25 @@ const Login = () => {
     const location = useLocation();
     let from = location?.state?.pathname || "/";
 
+    const [token] = useToken(user || gUser)
+
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
     };
+
+    const navigateToReg = () => {
+        navigate("/register")
+    }
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     if (loading || gLoading) {
         return <Loading></Loading>
     }
 
-    if (user || gUser) {
-        navigate(from, { replace: true });
-    }
     if (error || gError) {
         signInError = <p className='text-red-500'>{error?.message || gError?.message}</p>
     }
@@ -98,7 +107,7 @@ const Login = () => {
                         {signInError}
                         <input type="submit" className="btn btn-accent w-full mx-w-xs" value="Login" />
                     </form>
-                    <p><small>New to Parts Manufacturer? <Link to="/register" className="text-accent">Create an account</Link></small></p>
+                    <p><small>New to Parts Manufacturer? <button onClick={navigateToReg} className="text-accent">Create an account</button></small></p>
 
                     <div className="divider">OR</div>
                     <button
