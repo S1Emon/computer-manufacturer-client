@@ -8,9 +8,9 @@ const Service = ({ service }) => {
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <p>{details}</p>
-                {/* <div className="card-actions justify-center">
-                    <button className="btn btn-primary">Book Now</button>
-                </div> */}
+                <div className='items-center text-center'>
+                    <button className="btn bg-accent-focus btn-sm btn-wide text-white">Book Now</button>
+                </div>
             </div>
         </div>
     );

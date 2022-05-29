@@ -21,7 +21,7 @@ const Part = ({ part }) => {
                 <p>Minimum Order: {quantity}</p>
                 <p>Available Quantity: {available}</p>
                 <div>
-                    <button className="btn bg-accent-focus text-white" onClick={() => handleNavigate(_id)}>Buy Now</button>
+                    <button className="btn bg-accent-focus btn-wide btn-sm text-white" onClick={() => handleNavigate(_id)}>Buy Now</button>
                 </div>
             </div>
         </div>

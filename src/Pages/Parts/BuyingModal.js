@@ -9,7 +9,7 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
 
     const handleBuying = event => {
         event.preventDefault();
-        const order = event.target.order.value
+        const order = event.target.order.value;
         const phone = event.target.phone.value;
         const buying = {
             buyPartId: _id,
@@ -17,8 +17,8 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
             customerName: user.displayName,
             email: user?.email,
             phone: phone,
-            order: order,
-            price: price
+            quantity: order,
+            price: price * order
         }
 
         fetch('http://localhost:5000/orders', {
@@ -30,11 +30,11 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.success) {
-                    toast(`Your order is placed ${name}`)
+                if (!data.success) {
+                    toast.success(`Your order is placed ${name}`)
                 }
                 else {
-                    toast.error(`Already have and appointment on ${data.booking?.date} at ${data.booking?.slot}`)
+                    toast.error(`Error to Placed ${name}`)
                 }
                 setBuyPart(null);
             });
