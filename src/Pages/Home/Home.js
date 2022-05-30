@@ -9,6 +9,7 @@ import Summary from './Summary';
 import Footer from '../Shared/Footer';
 import useParts from '../../hooks/useParts';
 import Part from '../Parts/Part';
+import CustomerReview from './CustomerReview';
 
 const Home = () => {
     const [services] = useServices();
@@ -49,6 +50,7 @@ const Home = () => {
                 </div>
             </div>
             <Summary></Summary>
+            <CustomerReview></CustomerReview>
             <Footer></Footer>
         </div>
     );
