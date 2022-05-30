@@ -21,7 +21,7 @@ const BuyingModal = ({ buyPart, setBuyPart }) => {
             price: price * order
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://mysterious-forest-28554.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

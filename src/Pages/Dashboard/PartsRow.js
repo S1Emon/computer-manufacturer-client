@@ -5,7 +5,7 @@ const PartsRow = ({ part, index, refetch, setDeleteParts }) => {
     const { _id, name, img, price, available } = part;
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/parts/${id}`, {
+        fetch(`https://mysterious-forest-28554.herokuapp.com/parts/${id}`, {
             method: "DELETE",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

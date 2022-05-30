@@ -8,7 +8,7 @@ const BuyNow = () => {
     const [buyPart, setBuyPart] = useState(null)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/part/${partsId}`)
+        fetch(`https://mysterious-forest-28554.herokuapp.com/part/${partsId}`)
             .then(res => res.json())
             .then(data => setPart(data))
     }, [partsId])

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const AddParts = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        const url = `http://localhost:5000/parts`
+        const url = `https://mysterious-forest-28554.herokuapp.com/parts`
         fetch(url, {
             method: 'POST',
             headers: {

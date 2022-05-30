@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import PartsRow from './PartsRow';
 
 const ManageParts = () => {
-    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch('http://localhost:5000/parts', {
+    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch('https://mysterious-forest-28554.herokuapp.com/parts', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
