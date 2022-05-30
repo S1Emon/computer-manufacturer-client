@@ -8,7 +8,6 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([])
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
-    console.log(user);
 
     useEffect(() => {
         if (user) {
@@ -19,7 +18,6 @@ const MyOrders = () => {
                 }
             })
                 .then(res => {
-                    console.log('res', res);
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
                         localStorage.removeItem('accessToken');
@@ -31,12 +29,12 @@ const MyOrders = () => {
                     setOrders(data);
                 });
         }
-    }, [user])
+    }, [user, navigate])
     return (
         <div>
             <h3>My Orders {orders.length}</h3>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
 
                     <thead>
                         <tr>
@@ -50,7 +48,7 @@ const MyOrders = () => {
                     <tbody>
                         {
                             orders?.map((or, index) =>
-                                <tr>
+                                <tr key={index}>
                                     <th>{index + 1}</th>
                                     <td>{or.customer}</td>
                                     <td>{or.parts}</td>
