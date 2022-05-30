@@ -17,6 +17,8 @@ import MyOrders from "./Pages/Dashboard/MyOrders";
 import MyReview from "./Pages/Dashboard/MyReview";
 import MyHistory from "./Pages/Dashboard/MyHistory";
 import Users from "./Pages/Dashboard/Users";
+import SecureAdmin from "./Pages/Login/SecureAdmin";
+import AddParts from "./Pages/Dashboard/AddParts";
 
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
           <Route path="history" element={<MyHistory></MyHistory>}></Route>
 
           <Route path="users" element={<Users></Users>}></Route>
+          <Route path="addparts" element={<AddParts></AddParts>}></Route>
         </Route>
         <Route path="services" element={<Services></Services>}></Route>
         <Route path="login" element={<Login></Login>}></Route>
