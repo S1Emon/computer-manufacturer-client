@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Computer Parts Manufacturer
+
+## Live site: 
+
+### Website's different features and functionality
+#### 1. There are two part in this website
+#### 2. Customer side and admin site.
+#### 3. Customer can buy their products, pay and add reviews.
+#### 4. Admin can add products, manage products and manage all users.
+#### 5. There are online Payment method system. 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
