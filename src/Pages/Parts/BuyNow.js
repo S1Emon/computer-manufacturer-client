@@ -30,7 +30,7 @@ const BuyNow = () => {
                         <p>Minimum Order: {part?.quantity}</p>
                         <p>Available Quantity: {part?.available}</p>
                         <div>
-                            <label for="buying-modal" className="btn bg-accent-focus text-white"
+                            <label htmlFor="buying-modal" className="btn bg-accent-focus text-white"
                                 onClick={() => setBuyPart(part)}>Buy Now</label>
                         </div>
                     </div>

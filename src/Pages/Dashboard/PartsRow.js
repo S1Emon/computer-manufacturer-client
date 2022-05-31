@@ -25,8 +25,8 @@ const PartsRow = ({ part, index, refetch, setDeleteParts }) => {
 
         <tr>
             <th>{index + 1}</th>
-            <td><div class="avatar">
-                <div class="w-8 rounded">
+            <td><div className="avatar">
+                <div className="w-8 rounded">
                     <img src={img} alt={name} />
                 </div>
             </div></td>
@@ -34,7 +34,7 @@ const PartsRow = ({ part, index, refetch, setDeleteParts }) => {
             <td>{price}</td>
             <td>{available}</td>
             <td>
-                <label onClick={() => handleDelete(_id)} for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+                <label onClick={() => handleDelete(_id)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
             </td>
         </tr>
 

@@ -30,34 +30,34 @@ const AddReview = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
 
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Your Name</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Your Name</span>
                     </label>
-                    <input {...register("name", { required: true })} type="text" placeholder="Parts Name" class="input input-bordered w-full max-w-xs" />
+                    <input {...register("name", { required: true })} type="text" placeholder="Parts Name" className="input input-bordered w-full max-w-xs" />
                 </div>
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Image URL</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Image URL</span>
                     </label>
-                    <input {...register("img", { required: true })} type="text" placeholder="Image URL" class="input input-bordered w-full max-w-xs" />
-                </div>
-
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Ratings</span>
-                    </label>
-                    <input {...register("ratings", { required: true })} type="number" placeholder="Ratings out of 5 " class="input input-bordered w-full max-w-xs" />
+                    <input {...register("img", { required: true })} type="text" placeholder="Image URL" className="input input-bordered w-full max-w-xs" />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Description</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Ratings</span>
                     </label>
-                    <input {...register("comment", { required: true })} type="text" placeholder="Parts Description" class="input input-bordered w-full max-w-xs" />
+                    <input {...register("ratings", { required: true })} type="number" placeholder="Ratings out of 5 " className="input input-bordered w-full max-w-xs" />
                 </div>
 
-                <input type="submit" value="Add One" class="btn btn-accent mt-3" />
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Description</span>
+                    </label>
+                    <input {...register("comment", { required: true })} type="text" placeholder="Parts Description" className="input input-bordered w-full max-w-xs" />
+                </div>
+
+                <input type="submit" value="Add One" className="btn btn-accent mt-3" />
             </form>
         </div>
     );

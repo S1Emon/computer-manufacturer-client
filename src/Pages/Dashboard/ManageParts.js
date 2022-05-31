@@ -16,7 +16,7 @@ const ManageParts = () => {
     return (
         <div>
             <h1>Manage All Parts {parts?.length}</h1>
-            <table class="table w-full">
+            <table className="table w-full">
                 <thead>
                     <tr>
                         <th></th>

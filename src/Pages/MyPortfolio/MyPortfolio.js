@@ -6,16 +6,16 @@ const MyPortfolio = () => {
             <h1 className='font-bold text-4xl text-center mt-6'>Welcome to My Portfolio!!!</h1>
 
             <div className='flex justify-center my-10'>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                        <div class="avatar">
-                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <figure className="px-10 pt-10">
+                        <div className="avatar">
+                            <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                 <img src="https://i.ibb.co/0Qkn9bk/IMG-1716.jpg" alt="Profile" />
                             </div>
                         </div>
                     </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Md Emon Hossain</h2>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title">Md Emon Hossain</h2>
                         <span className=''>
                             <p className='font-bold'>Educational Background:-</p>
                             <p className='font-semibold'>Department	: Marketing

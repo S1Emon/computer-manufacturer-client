@@ -9,9 +9,9 @@ const Support = () => {
             <Welcome></Welcome>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
 
-                <div class="card lg:card-side bg-base-100 shadow-2xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Entitled Systems Support</h2>
+                <div className="card lg:card-side bg-base-100 shadow-2xl">
+                    <div className="card-body">
+                        <h2 className="card-title">Entitled Systems Support</h2>
                         <p><span className='text-red-400 font-bold'>There are 3 main sections:</span> <br />
 
                             <span className='font-bold'>My entitled software</span> - activities related to Power and Storage software - download licensed, free and trial software media, place software update orders and manage software keys.
@@ -24,9 +24,9 @@ const Support = () => {
 
 
 
-                <div class="card lg:card-side bg-base-100 shadow-2xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Training and certification</h2>
+                <div className="card lg:card-side bg-base-100 shadow-2xl">
+                    <div className="card-body">
+                        <h2 className="card-title">Training and certification</h2>
                         <p><span className='font-bold text-red-400'>Additional options are available as icons in the top right corner of the menu:</span> <br />
 
                             <span className='font-bold'>Feedback -</span> send comments and ideas about everything you see and do on the website (only available after signing in).
@@ -39,9 +39,9 @@ const Support = () => {
                 </div>
 
 
-                <div class="card lg:card-side bg-base-100 shadow-2xl">
-                    <div class="card-body">
-                        <h2 class="card-title">Problem Ticketing (PMRs)</h2>
+                <div className="card lg:card-side bg-base-100 shadow-2xl">
+                    <div className="card-body">
+                        <h2 className="card-title">Problem Ticketing (PMRs)</h2>
                         <p className='font-semibold'>Service Request Access problem ticketing for most hardware and software products</p>
                         <p> <span className='text-red-500 font-semibold'>Attention - This site will be sunset Q3 2022 and only supports cases for the following products:</span> <br />
                             <span className='font-semibold'>
@@ -65,9 +65,9 @@ const Support = () => {
 
 
 
-                <div class="card lg:card-side bg-base-100 shadow-2xl">
-                    <div class="card-body">
-                        <h2 class="card-title">We are CS Support!</h2>
+                <div className="card lg:card-side bg-base-100 shadow-2xl">
+                    <div className="card-body">
+                        <h2 className="card-title">We are CS Support!</h2>
                         <p>
                             <span className='font-bold'>Our strategy:-</span> <br />
                             Our strategy is to continually evolve the support you receive by infusing our tools and processes with cognitive features - fueled by knowledge and driven by insights. These cognitive abilities are going to: <br />
