@@ -1,6 +1,6 @@
 # Computer Parts Manufacturer
 
-## Live site: 
+## Live site: https://computer-parts-manufactu-c030e.firebaseapp.com/
 
 ### Website's different features and functionality
 #### 1. There are two part in this website
